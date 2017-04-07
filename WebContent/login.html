@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Tp Previo</title>
+
+<script type="text/javascript" language="javascript">
+  function carga(){
+	  document.getElementById("usuario").focus();  
+  }
+  function valideDatos(){
+	  var usuario= document.getElementById("usuario");
+	  var password= document.getElementById("password");
+	  
+	  if((usuario.value=="" || usuario.value=='' || usuario.value==null)&&(password.value==""||password.value==''||
+			  usuario.value==null)){
+		  alert("Ingrese usuario y contraseña");
+		  document.getElementById("usuario").focus(); 
+		  return false;
+	  } else 
+		  if (usuario.value=="" || usuario.value=='' || usuario.value==null){
+			alert("Ingrese usuario");
+			document.getElementById("usuario").focus(); 
+			return false;
+		  }else 
+			  if(password.value==""||password.value==''||usuario.value==null){
+				  alert("Ingrese contraseña"); 
+				  document.getElementById("password").focus(); 
+				  return false;
+			  } else
+				  return true;
+	  
+  }
+</script>
+
+</head>
+<body onload="carga();">
+<form action="loginWeb.jr" method="POST" onsubmit="return valideDatos();">
+<table align="center">
+ <tr>
+ <td colspan="2" style="font-weight: bold;font-size: 20px;">Ingrese usuario y contraseña</td>
+ </tr>
+ <tr>
+ <td style="font-weight: bold;">Usuario:</td>
+ <td><input type="text" name="usuario" id="usuario"></td>
+ </tr>
+ <tr>
+ <td style="font-weight: bold;size:12px;" >Password: </td>
+  <td><input type="password" name="password" id="password"></td>
+ </tr>
+ 
+ <tr>
+  <td><input type="submit" value="Aceptar"></td>
+  <td><input type="button" value="Cancelar"></td>
+  
+ </tr>
+</table>
+</form>
+</body>
+</html>

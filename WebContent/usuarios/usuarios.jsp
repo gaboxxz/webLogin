@@ -8,6 +8,8 @@
 <title>Administracion de Usuarios</title>
 </head>
 <body>
+<form action="/" method="POST" onsubmit="/;">
+
 <p style="font-weight:bold;font-size:20px;">
 Administracion de usuarios: 
 </p>
@@ -23,6 +25,11 @@ Administracion de usuarios:
  <td><a href="eliminarUser.jsp"> Eliminar un usuario</a>
 </tr>
 
+<tr>
+<td></td>
+</tr>
+
 </table>
+</form>
 </body>
 </html>

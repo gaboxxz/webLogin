@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <meta charset="ISO-8859-1">
 <title>Login Tp Previo</title>
-
-<script type="text/javascript" language="javascript">
+</script>
+<script type="text/javascript" >
   function carga(){
 	  document.getElementById("usuario").focus();  
   }
+  function estaVacio(valor) {
+	  return valor === "" || valor === '' || valor === null || valor === undefined;
+	}
   function valideDatos(){
 	  var usuario= document.getElementById("usuario");
 	  var password= document.getElementById("password");
 	  
-	  if((usuario.value=="" || usuario.value=='' || usuario.value==null)&&(password.value==""||password.value==''||
-			  usuario.value==null)){
+	  if(estaVacio(usuario.value))&&(estaVacio(password.value))){
 		  alert("Ingrese usuario y contraseña");
 		  document.getElementById("usuario").focus(); 
 		  return false;
 	  } else 
-		  if (usuario.value=="" || usuario.value=='' || usuario.value==null){
+		  if (estaVacio(usuario.value)){
 			alert("Ingrese usuario");
 			document.getElementById("usuario").focus(); 
 			return false;
 		  }else 
-			  if(password.value==""||password.value==''||usuario.value==null){
+			  if(estaVacio(password.value)){
 				  alert("Ingrese contraseña"); 
 				  document.getElementById("password").focus(); 
 				  return false;

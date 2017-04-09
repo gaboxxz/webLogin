@@ -13,6 +13,6 @@
 <!-- pido la variable usuario logeado de loginServlet. En el servlet la setie con settAtributte -->
 Bienvenido al sistema: <%= ((VoLogin)session.getAttribute("usuarioLogeado")).getNombre() %>  
 </p>
-<a href="usuarios/usuarios.jsp"> Administracion de Usuarios</a>
+<a href="/usuarios.jsp"> Administracion de Usuarios</a>
 </body>
 </html>

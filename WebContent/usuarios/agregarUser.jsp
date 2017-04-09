@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<form action="usuarios.jsp" method="POST" onsubmit="usuarios.jsp;"">
+<form action="usuarios.jsp" method="POST" onsubmit="usuarios.jsp;">
 
 <p style="font-weight:bold;font-size:20px;color: red;">
 Campos para agregar usuario
